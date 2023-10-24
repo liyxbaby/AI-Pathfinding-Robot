@@ -12,4 +12,10 @@ DQN::DQN()
         nActions = Config:: nActions;
         nSamples = Config:: nSamples;
         Memory memory;
-        MLP network
+        MLP network;
+        lastState = Utils::create2DArray(1,nStates);
+        lastAction = Utils::create2DArrayOfIntegers(1,1);
+        lastReward = Utils::create2DArray(1,1);
+        action = 0;
+        batchState = Utils::create2DArray(nSamples, nStates);
+        batchNextState = Utils::create2DArray(nSa
