@@ -28,4 +28,14 @@ int DQN::update(float** reward, float** newState)
 {
 	//std::cout << "holy fucking shit" << std::endl;
 
-    if(memory.cou
+    if(memory.counter < Config::learningIterations)
+    {
+        action = network.predict(newState, true);
+    	memory.push(lastState, newState, reward, lastAction);
+    }
+
+    else
+        action = network.predict(newState, false);
+
+    if(memory.counter >= nSamples && memory.counter < Config::learningIterations)
+    
