@@ -43,4 +43,12 @@ int DQN::update(float** reward, float** newState)
         memory.sampleStates(batchState, randomIndices);
         memory.sampleNextStates(batchNextState, randomIndices);
         memory.sampleRewards(batchReward, randomIndices);
-        memory.sampleActions(batchAction, rand
+        memory.sampleActions(batchAction, randomIndices);
+        network.learn(batchState, batchNextState, batchReward, batchAction);
+    }
+
+    lastAction[0][0] = action;
+    Utils::copy(lastState,newState, 1, nStates);
+
+    return action;
+}
