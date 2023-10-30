@@ -18,4 +18,11 @@ class DQN
         float** lastReward;
         int action;
         float** batchState;
-        float** 
+        float** batchNextState;
+        float** batchReward;
+        int** batchAction;
+        int** randomIndices;
+        int update(float** reward, float** newState);
+
+};
+#endif
