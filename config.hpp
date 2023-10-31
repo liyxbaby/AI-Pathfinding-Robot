@@ -15,4 +15,4 @@ class Config
     const static int learningIterations = 2500;
 };
 
-#end
+#endif
