@@ -29,4 +29,18 @@ void Memory::push(float** state, float** nextState, float** reward, int** action
     }
     for (int i = 0 ; i < nStates ; i++)
     {
-        states[counter][i] = state[0][
+        states[counter][i] = state[0][i];
+        nextStates[counter][i] = nextState[0][i];
+    }
+    rewards[counter][0] = reward[0][0];
+    actions[counter][0] = action[0][0];
+    counter++;
+}
+
+void Memory::generateRandomIndices(int** result)
+{
+    mt19937 engine(device());
+    if(full == false)
+    {
+    uniform_int_distribution<int> r(0,counter-1);
+ 
