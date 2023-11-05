@@ -43,4 +43,17 @@ void Memory::generateRandomIndices(int** result)
     if(full == false)
     {
     uniform_int_distribution<int> r(0,counter-1);
- 
+    for (int i = 0 ; i < nSamples ; i++)
+        result[i][0] = r(engine);
+    }
+    else
+    {
+    uniform_int_distribution<int> r(0,size-1);
+    for (int i = 0 ; i < nSamples ; i++)
+        result[i][0] = r(engine);
+    }
+}
+
+void Memory::sampleStates(float** result, int** indices)
+{
+    for (int
