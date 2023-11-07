@@ -56,4 +56,15 @@ void Memory::generateRandomIndices(int** result)
 
 void Memory::sampleStates(float** result, int** indices)
 {
-    for (int
+    for (int i = 0 ; i < nSamples ; i++)
+    for (int j = 0 ; j < nStates ; j++)
+        result[i][j] = states[indices[i][0]][j];
+}
+
+void Memory::sampleNextStates(float** result, int** indices)
+{
+    for (int i = 0 ; i < nSamples ; i++)
+    for (int j = 0 ; j < nStates ; j++)
+        result[i][j] = nextStates[indices[i][0]][j];
+}
+
