@@ -68,3 +68,13 @@ void Memory::sampleNextStates(float** result, int** indices)
         result[i][j] = nextStates[indices[i][0]][j];
 }
 
+void Memory::sampleRewards(float** result, int** indices)
+{
+    for (int i = 0 ; i < nSamples ; i++)
+        result[i][0] = rewards[indices[i][0]][0];
+}
+
+void Memory::sampleActions(int** result, int** indices)
+{
+    for (int i = 0 ; i < nSamples ; i++)
+        result
