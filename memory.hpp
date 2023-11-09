@@ -9,4 +9,9 @@ class Memory
         void generateRandomIndices(int** result);
         void sampleStates(float** result, int** indices);
         void sampleNextStates(float** result, int** indices);
-   
+        void sampleRewards(float** result, int** indices);
+        void sampleActions(int** result, int** indices);
+        void push(float** state, float** nextState, float** reward, int** action);
+        std::random_device device;     // only used once to initialise (seed) engine
+    	float  ** states;
+ 
