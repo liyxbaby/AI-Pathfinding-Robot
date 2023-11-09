@@ -77,4 +77,5 @@ void Memory::sampleRewards(float** result, int** indices)
 void Memory::sampleActions(int** result, int** indices)
 {
     for (int i = 0 ; i < nSamples ; i++)
-        result
+        result[i][0] = actions[indices[i][0]][0];
+}
