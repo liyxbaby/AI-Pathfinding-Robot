@@ -14,4 +14,16 @@ class Memory
         void push(float** state, float** nextState, float** reward, int** action);
         std::random_device device;     // only used once to initialise (seed) engine
     	float  ** states;
- 
+    	float  ** nextStates;
+    	float  ** rewards;
+    	int  ** actions;
+        int counter;
+        int size;
+        int nSamples;
+        int nNeurons;
+        int nActions;
+        int nStates;
+        bool full;
+};
+
+#endif
