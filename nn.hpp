@@ -11,4 +11,18 @@ class MLP
     	float  ** b1;
     	float  ** W2;
     	float  ** b2;
-        float gamm
+        float gamma;
+        float learningRate;
+        int W1r;
+        int W1c;
+        int W2r;
+        int W2c;
+        int b1r;
+        int b1c;
+        int b2r;
+        int b2c;
+        int nStates;
+        int nNeurons;
+        int nActions;
+        int nSamples;
+        float  ** batchHid
