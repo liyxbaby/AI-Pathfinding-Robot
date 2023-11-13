@@ -25,4 +25,15 @@ class MLP
         int nNeurons;
         int nActions;
         int nSamples;
-        float  ** batchHid
+        float  ** batchHiddenLayerOutput;
+        float  ** batchOutput;
+        float  ** batchNextOutput;
+        bool init;
+        float  ** batchHiddenLayerNextOutput;
+        float  ** target;
+        float  ** error;
+        int  ** maxIndices;
+        float  ** dW2;
+        float  ** dW1;
+        float  ** db2;
+      
