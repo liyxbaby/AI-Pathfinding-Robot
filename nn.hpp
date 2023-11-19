@@ -36,4 +36,13 @@ class MLP
         float  ** dW2;
         float  ** dW1;
         float  ** db2;
-      
+        float  ** db1;
+        float  ** derror;
+        std::random_device device;
+        int  ** action;
+        float  ** W2Transposed;
+        float  ** batchHiddenLayerOutputTransposed;
+        float  ** batchStateTransposed;
+        float  ** hiddenLayerOutput;
+        float  ** output;
+    
