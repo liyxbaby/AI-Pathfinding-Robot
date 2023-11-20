@@ -45,4 +45,9 @@ class MLP
         float  ** batchStateTransposed;
         float  ** hiddenLayerOutput;
         float  ** output;
-    
+        float ** dOutput;
+        void learn(float** batchState, float** batchNextState, float** batchReward, int** batchAction);
+        int predict(float** x, bool learning);
+};
+
+#endif
