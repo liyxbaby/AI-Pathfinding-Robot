@@ -28,4 +28,17 @@ float** Utils::create2DArray(int r, int c)
                 array2D[h][w] = 0;
         }
     }
-    retu
+    return array2D;
+}
+
+// FUNCTION FOR CLEARING VALUES OF A 2D POINTER OF FLOATING POINTS
+void Utils::clear(float** x, int r, int c)
+{
+    for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+            x[i][j] = 0;
+}
+
+void Utils::clearIntegers(int** x, int r, int c)
+{
+    for(int i 
