@@ -41,4 +41,15 @@ void Utils::clear(float** x, int r, int c)
 
 void Utils::clearIntegers(int** x, int r, int c)
 {
-    for(int i 
+    for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+            x[i][j] = 0;
+}
+
+
+// FUNCTION FOR CLEARING VALUES OF A 2D POINTER OF INTEGERS
+int** Utils::create2DArrayOfIntegers(int r, int c)
+{
+    int** result  = 0;
+    result = new int*[r];
+    for (int i = 0; i < 
