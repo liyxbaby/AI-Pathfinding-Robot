@@ -67,4 +67,14 @@ int** Utils::create2DArrayOfIntegers(int r, int c)
 // FUNCTION FOR CALCULATING DOT PRODUCT OF MATRICES
 void  Utils::dot(float** result, float ** x, float ** y, int m, int n, int p)
 {
-	Utils::
+	Utils::clear(result, m, p);
+    for(int i = 0 ; i < m ; i++)
+        for(int j = 0 ; j < p ; j++)
+            for(int k = 0 ; k < n ; k++)
+                {
+                  result[i][j] +=  x[i][k] * y[k][j];
+                }
+}
+
+// FUNCTION FOR CALCULATING SUM OF MATRICES
+void  Utils::sum(float ** x, float ** y, i
