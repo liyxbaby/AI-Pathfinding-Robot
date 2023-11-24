@@ -52,4 +52,19 @@ int** Utils::create2DArrayOfIntegers(int r, int c)
 {
     int** result  = 0;
     result = new int*[r];
-    for (int i = 0; i < 
+    for (int i = 0; i < r; i++)
+    {
+        result[i] = new int[c];
+
+        for (int j = 0; j < c; j++)
+        {
+                result[i][j] = 0;
+        }
+    }
+    return result;
+}
+
+// FUNCTION FOR CALCULATING DOT PRODUCT OF MATRICES
+void  Utils::dot(float** result, float ** x, float ** y, int m, int n, int p)
+{
+	Utils::
