@@ -77,4 +77,16 @@ void  Utils::dot(float** result, float ** x, float ** y, int m, int n, int p)
 }
 
 // FUNCTION FOR CALCULATING SUM OF MATRICES
-void  Utils::sum(float ** x, float ** y, i
+void  Utils::sum(float ** x, float ** y, int r, int c)
+{
+    for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+            x[i][j] +=  y[i][j];
+}
+
+// FUNCTION FOR COPYING  MATRICES
+void  Utils::copy(float ** x, float ** y, int r, int c)
+{
+    for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+            x[i][
