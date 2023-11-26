@@ -100,4 +100,16 @@ void  Utils::distance(float ** result, float ** x, int r, int c)
             result[i][j] = result[i][j] - x[i][j];
 }
 
-// FUNCTION FOR CALCULATING DISTANCE OF 
+// FUNCTION FOR CALCULATING DISTANCE OF MATRICES
+void Utils::relu(float ** x, int r, int c)
+{
+        for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+        if(x[i][j] <= 0)
+            x[i][j] = 0;
+}
+
+// FUNCTION FOR CALCULATING SCALAR MULTIPLICATION ON MATRICES
+void Utils::scalar(float ** x, int r, int c , float alpha)
+{
+        for(int i = 0 ; i < r
