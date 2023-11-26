@@ -89,4 +89,15 @@ void  Utils::copy(float ** x, float ** y, int r, int c)
 {
     for(int i = 0 ; i < r ; i++)
         for(int j = 0 ; j < c ; j++)
-            x[i][
+            x[i][j] =  y[i][j];
+}
+
+// FUNCTION FOR CALCULATING DISTANCE OF MATRICES
+void  Utils::distance(float ** result, float ** x, int r, int c)
+{
+    for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+            result[i][j] = result[i][j] - x[i][j];
+}
+
+// FUNCTION FOR CALCULATING DISTANCE OF 
