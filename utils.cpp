@@ -112,4 +112,17 @@ void Utils::relu(float ** x, int r, int c)
 // FUNCTION FOR CALCULATING SCALAR MULTIPLICATION ON MATRICES
 void Utils::scalar(float ** x, int r, int c , float alpha)
 {
-        for(int i = 0 ; i < r
+        for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+            x[i][j] = alpha*x[i][j];
+}
+
+// FUNCTION FOR CALCULATING ARGMAX OF MATRICES
+void Utils::argMax(int** result, float **x, int r, int c, int axis)
+{
+    if(axis==0)
+    {
+    for(int j = 0 ; j < c ; j++)
+    {
+        float max = x[0][j];
+ 
