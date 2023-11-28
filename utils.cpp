@@ -125,4 +125,18 @@ void Utils::argMax(int** result, float **x, int r, int c, int axis)
     for(int j = 0 ; j < c ; j++)
     {
         float max = x[0][j];
- 
+        for(int i = 1 ; i < r ; i++)
+        if(x[i][j] > max)
+        {
+            max = x[i][j];
+            result[0][j] = i;
+        }
+    }
+    }
+    else
+    {
+    for(int i = 0 ; i < r ; i++)
+    {
+        float max = x[i][0];
+        for(int j = 1 ; j < c ; j++)
+        if(x[i]
