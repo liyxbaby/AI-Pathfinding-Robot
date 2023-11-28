@@ -139,4 +139,18 @@ void Utils::argMax(int** result, float **x, int r, int c, int axis)
     {
         float max = x[i][0];
         for(int j = 1 ; j < c ; j++)
-        if(x[i]
+        if(x[i][j] > max)
+        {
+            max = x[i][j];
+            result[i][0] = j;
+        }
+    }
+    }
+}
+
+// FUNCTION FOR CALCULATING TRANSPOSE OF MATRICES
+void Utils::transpose(float ** result, float ** x, int r, int c)
+{
+        for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+            result[j][i] = x[i][j];
