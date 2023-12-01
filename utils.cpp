@@ -154,3 +154,15 @@ void Utils::transpose(float ** result, float ** x, int r, int c)
         for(int i = 0 ; i < r ; i++)
         for(int j = 0 ; j < c ; j++)
             result[j][i] = x[i][j];
+}
+
+// FUNCTION FOR CALCULATING SUM OF MATRIX ROWS OR COLUMNS
+void Utils::sigma(float** result, float ** x, int r, int c)
+{
+        for(int j = 0 ; j < c ; j++)
+        for(int i = 0 ; i < r ; i++)
+        result[0][j] += x[i][j];
+}
+
+// FUNCTION FOR CALCULATING SOFTMAX FUNCTION
+void Utils::softmax(float** res
