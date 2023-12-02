@@ -174,4 +174,16 @@ void Utils::softmax(float** result, float ** x, int r, int c)
         float sumExponents = 0;
         for(int i = 0 ; i < r ; i++)
         for(int j = 0 ; j < c ; j++)
-        sumExpon
+        sumExponents += result[i][j];
+
+        for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+        result[i][j] = result[i][j]/ sumExponents;
+
+}
+
+// FUNCTION FOR CALCULATING PARTIAL SUM
+void Utils::partialSum(float** result,  float** px, int r, int c)
+{
+	for(int i = 0 ; i < r ; i++)
+	for(int 
