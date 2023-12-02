@@ -165,4 +165,13 @@ void Utils::sigma(float** result, float ** x, int r, int c)
 }
 
 // FUNCTION FOR CALCULATING SOFTMAX FUNCTION
-void Utils::softmax(float** res
+void Utils::softmax(float** result, float ** x, int r, int c)
+{
+        for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+        result[i][j] = exp(x[i][j]/Config::softmaxTemperature);
+
+        float sumExponents = 0;
+        for(int i = 0 ; i < r ; i++)
+        for(int j = 0 ; j < c ; j++)
+        sumExpon
