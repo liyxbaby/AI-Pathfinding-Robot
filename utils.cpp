@@ -186,4 +186,22 @@ void Utils::softmax(float** result, float ** x, int r, int c)
 void Utils::partialSum(float** result,  float** px, int r, int c)
 {
 	for(int i = 0 ; i < r ; i++)
-	for(int 
+	for(int j = 0 ; j < c ; j++)
+	result[i][j] +=  px[0][j];
+}
+
+void Utils::rewarder(float** reward, string command)
+{
+    if(command == "1")
+        reward[0][0] = 1;
+    else
+        reward[0][0] = -1;
+}
+
+u32 Utils::float2fix(float input)
+{
+	u32 temp = 0;
+
+	int fixedPoint[32];
+
+	for (int i = 0 ; 
