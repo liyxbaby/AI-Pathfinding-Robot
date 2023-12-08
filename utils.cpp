@@ -219,4 +219,13 @@ u32 Utils::float2fix(float input)
 	{
 		if (test >= (pow(2,i)))
 		{
-				fixedPoint[Config::FR_Size+i]
+				fixedPoint[Config::FR_Size+i]=1;
+				test = test - (pow(2,i));
+		}
+
+		}
+
+	    for(int i = 0; i < 32; i++)
+	    	temp = temp+(pow(2,i))*fixedPoint[i];
+	    return temp;
+}
