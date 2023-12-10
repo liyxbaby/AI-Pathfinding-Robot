@@ -15,4 +15,8 @@ class Utils
         static void    sum(float ** x, float ** y, int r, int c);
         static void    copy(float ** x, float ** y, int r, int c);
         static void    distance(float** result, float ** x,  int r, int c);
-        static void    relu(float ** x, int 
+        static void    relu(float ** x, int r, int c);
+        static void    scalar(float ** x, int r, int c , float alpha);
+        static void    argMax(int** result, float **x, int r, int c, int axis);
+        static void    transpose(float ** result, float ** x, int r, int c);
+        static void    sigma(float** result, float ** x, 
